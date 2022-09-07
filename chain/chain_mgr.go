@@ -18,11 +18,11 @@ import (
 	"github.com/ethereum/go-ethereum/eth"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/node"
-	"github.com/pchain/p2p"
-	"github.com/pchain/rpc"
 	"github.com/pkg/errors"
-	"github.com/tendermint/go-crypto"
-	dbm "github.com/tendermint/go-db"
+	"github.com/renyanduo/pchain/p2p"
+	"github.com/renyanduo/pchain/rpc"
+	"github.com/tendermint/tendermint/crypto"
+	dbm "github.com/tendermint/tm-db"
 	"gopkg.in/urfave/cli.v1"
 )
 

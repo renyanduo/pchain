@@ -4,6 +4,14 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
+	"math/big"
+	"regexp"
+	"strings"
+	"sync"
+	"time"
+	"unicode/utf8"
+
+	pabi "github.com/ethereum/go-ethereum/abi"
 	"github.com/ethereum/go-ethereum/bridge"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
@@ -21,15 +29,8 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/ethereum/go-ethereum/trie"
-	pabi "github.com/pchain/abi"
-	"github.com/tendermint/go-crypto"
-	dbm "github.com/tendermint/go-db"
-	"math/big"
-	"regexp"
-	"strings"
-	"sync"
-	"time"
-	"unicode/utf8"
+	"github.com/tendermint/tendermint/crypto"
+	dbm "github.com/tendermint/tm-db"
 )
 
 type CrossChainHelper struct {

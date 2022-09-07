@@ -11,5 +11,5 @@ set GOPATH=%workspace%
 ::echo %GOPATH%
 cd %pchaindir%
 ::echo %~dp0
-go build -i -v -o %workspace%\bin\pchain.exe github.com/pchain/cmd
+go build -i -v -o %workspace%\bin\pchain.exe github.com/renyanduo/pchain/cmd
 cd %workspace%

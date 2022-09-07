@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/ethereum/go-ethereum/bridge"
-	"github.com/ethereum/go-ethereum/consensus/pdbft/consensus"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/pchain/chain"
-	"gopkg.in/urfave/cli.v1"
 	"os"
 	"os/signal"
 	"strings"
 	"syscall"
+
+	"github.com/ethereum/go-ethereum/bridge"
+	"github.com/ethereum/go-ethereum/consensus/pdbft/consensus"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/renyanduo/pchain/chain"
+	"gopkg.in/urfave/cli.v1"
 )
 
 func pchainCmd(ctx *cli.Context) error {

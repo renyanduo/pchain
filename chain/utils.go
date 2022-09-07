@@ -3,7 +3,7 @@ package chain
 import (
 	"github.com/ethereum/go-ethereum/cmd/utils"
 	tmcfg "github.com/ethereum/go-ethereum/consensus/pdbft/config/pdbft"
-	cfg "github.com/tendermint/go-config"
+	cfg "github.com/tendermint/tendermint/config"
 	"gopkg.in/urfave/cli.v1"
 )
 

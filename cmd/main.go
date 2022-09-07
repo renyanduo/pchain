@@ -2,21 +2,22 @@ package main
 
 import (
 	"fmt"
-	"github.com/ethereum/go-ethereum/bridge"
-	"github.com/ethereum/go-ethereum/cmd/geth"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/pchain/chain"
-	"github.com/pchain/version"
-	"gopkg.in/urfave/cli.v1"
 	"os"
 	"path"
 	"path/filepath"
 	"runtime"
 	"time"
+
+	"github.com/ethereum/go-ethereum/bridge"
+	gethmain "github.com/ethereum/go-ethereum/cmd/geth"
+	"github.com/ethereum/go-ethereum/cmd/utils"
+	"github.com/ethereum/go-ethereum/console"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/ethereum/go-ethereum/params"
+	"github.com/renyanduo/pchain/chain"
+	"github.com/renyanduo/pchain/version"
+	"gopkg.in/urfave/cli.v1"
 )
 
 const (

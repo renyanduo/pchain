@@ -2,17 +2,25 @@ package chain
 
 import (
 	"fmt"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/pchain/abi"
 	"os"
 	"path/filepath"
+
+	"github.com/ethereum/go-ethereum/abi"
+	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/ethereum/go-ethereum/log"
 
 	"gopkg.in/urfave/cli.v1"
 
 	"encoding/json"
+	"io/ioutil"
+	"math/big"
+	"regexp"
+	"strconv"
+	"strings"
+	"time"
+
 	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/cmd/geth"
+	gethmain "github.com/ethereum/go-ethereum/cmd/geth"
 	"github.com/ethereum/go-ethereum/cmd/utils"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
@@ -20,15 +28,9 @@ import (
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/pkg/errors"
-	cmn "github.com/tendermint/go-common"
-	cfg "github.com/tendermint/go-config"
-	dbm "github.com/tendermint/go-db"
-	"io/ioutil"
-	"math/big"
-	"regexp"
-	"strconv"
-	"strings"
-	"time"
+	cfg "github.com/tendermint/tendermint/config"
+	cmn "github.com/tendermint/tendermint/libs/os"
+	dbm "github.com/tendermint/tm-db"
 )
 
 const (

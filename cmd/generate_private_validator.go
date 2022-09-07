@@ -6,7 +6,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/consensus/pdbft/types"
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/tendermint/go-wire"
+	"github.com/tendermint/go-amino"
 	"gopkg.in/urfave/cli.v1"
 	"os"
 	"path/filepath"
